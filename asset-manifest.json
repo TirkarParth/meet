@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/TirkarParth/meet.git/static/css/main.f855e6bc.css",
+    "main.js": "/TirkarParth/meet.git/static/js/main.c69f7772.js",
+    "static/js/453.4a9980c6.chunk.js": "/TirkarParth/meet.git/static/js/453.4a9980c6.chunk.js",
+    "service-worker.js": "/TirkarParth/meet.git/service-worker.js",
+    "static/media/logo.svg": "/TirkarParth/meet.git/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/TirkarParth/meet.git/index.html",
+    "main.f855e6bc.css.map": "/TirkarParth/meet.git/static/css/main.f855e6bc.css.map",
+    "main.c69f7772.js.map": "/TirkarParth/meet.git/static/js/main.c69f7772.js.map",
+    "453.4a9980c6.chunk.js.map": "/TirkarParth/meet.git/static/js/453.4a9980c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.c69f7772.js"
+  ]
+}
