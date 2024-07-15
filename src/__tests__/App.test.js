@@ -5,13 +5,16 @@ import { render, act } from '@testing-library/react';
 import App from '../App';
 
 describe('<App /> component', () => {
+    let AppDOM;
+    beforeEach(() => {
+      AppDOM = render(<App />).container.firstChild;
+    })
+  
     test('renders list of events', () => {
-        let container;
-        act(() => {
-            ({ container } = render(<App />));
-        });
-        const AppDOM = container.firstChild;
-        expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
+      expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
     });
-});
-
+  
+    test('render CitySearch', () => {
+      expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
+    });
+  });
