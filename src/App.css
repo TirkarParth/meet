@@ -1,38 +1,167 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e6f0f8;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
 .App {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#city-search {
+  margin-bottom: 6px;
+}
+
+.city {
+  width: 97%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+}
+
+.suggestion {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.suggestion li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccd6dd;
+}
+
+.suggestion li:last-child {
+  border-bottom: none;
+}
+
+.suggestion li:hover {
+  background-color: #ecf5ff;
+}
+
+#numberOfEvents {
+  margin-bottom: 20px;
+}
+
+#numberOfEvents input {
+  width: 97%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.event {
+  border: 1px solid #ccd6dd;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fdfdfd;
+}
+
+.showDetailsButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.showDetailsButton:hover {
+  background-color: #2980b9;
+}
+
+.details {
+  margin-top: 10px;
+  padding: 15px;
+  border: 1px solid #ccd6dd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  display: none; /* Hidden by default */
+}
+
+.details.active {
+  display: block; /* Show when active class is added */
+}
+
+.details.empty::before {
+  content: 'No information available.';
+  display: block;
+  color: #999;
   text-align: center;
+  font-style: italic;
+  padding: 10px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Popup Style */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.popup .closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.popup .closeButton:hover {
+  background-color: #c0392b;
 }
 
-.App-link {
-  color: #61dafb;
+.popup .content {
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
