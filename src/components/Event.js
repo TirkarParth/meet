@@ -1,33 +1,24 @@
-// src/components/Event.js
+import { useState } from "react";
 
-import React, { useState } from 'react';
 
-const Event = ({ event }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleToggle = () => {
-    setIsExpanded(!isExpanded);
-  };
-
-  return (
-    <div className="event">
-      <h2 onClick={handleToggle}>{event.summary}</h2>
-      {event.start && event.start.dateTime && (
-        <p>{new Date(event.start.dateTime).toLocaleString()}</p>
-      )}
-      {isExpanded && (
-        <div>
-          <p>{event.description}</p>
-          <p>{event.location}</p>
-          <ul>
-            {event.attendees.map((attendee) => (
-              <li key={attendee.email}>{attendee.email}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
-};
+const  Event = ({event}) => {
+   const [showDetails, setShowDetails] = useState(false);
+    return (
+        <li className="event">
+            <h2>{event.summary}</h2>
+            <p>{event.created}</p>
+            <p>{event.location}</p>
+            <button className='showDetailsButton' 
+            onClick={() => setShowDetails(!showDetails)}>
+                {showDetails ? 'Hide Details' : 'Show Details'}
+            </button>
+            {showDetails ? (
+                        <div className="details">
+                        <h3>Event Details</h3>
+                        <p>{event.details}</p>
+                        </div>) : null}
+        </li>
+    )
+}
 
 export default Event;

@@ -1,49 +1,54 @@
-// src/__tests__/Event.test.js
-
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import Event from '../components/Event';
+import { render } from '@testing-library/react';
 import mockData from '../mock-data';
+import Event from '../components/Event';
+import { getEvents } from '../api';
+import userEvent from '@testing-library/user-event';
+
 
 describe('<Event /> component', () => {
-  let event;
-  beforeEach(() => {
-    event = mockData[0]; // Use the first event from the mock data
-  });
-
-  test('renders event summary and start time by default (collapsed view)', () => {
-    const { getByText } = render(<Event event={event} />);
-    expect(getByText(event.summary)).toBeInTheDocument();
-    expect(getByText(new Date(event.start.dateTime).toLocaleString())).toBeInTheDocument();
-  });
-
-  test('does not render event description, location, and attendees by default (collapsed view)', () => {
-    const { queryByText } = render(<Event event={event} />);
-    expect(queryByText(event.description)).not.toBeInTheDocument();
-    expect(queryByText(event.location)).not.toBeInTheDocument();
-    event.attendees.forEach(attendee => {
-      expect(queryByText(attendee.email)).not.toBeInTheDocument();
+    let EventComponent;
+    const event = mockData[0].items[0];
+    beforeEach(() => {
+        EventComponent = render(<Event event={event} />);
     });
+  test('has event title', () => {
+    expect(EventComponent.queryByText(event.summary)).toBeInTheDocument();
   });
 
-  test('renders event description, location, and attendees when expanded', () => {
-    const { getByText } = render(<Event event={event} />);
-    fireEvent.click(getByText(event.summary)); // Simulate clicking the event to expand it
-    expect(getByText(event.description)).toBeInTheDocument();
-    expect(getByText(event.location)).toBeInTheDocument();
-    event.attendees.forEach(attendee => {
-      expect(getByText(attendee.email)).toBeInTheDocument();
-    });
+  test('has event created time', () => {
+    expect(EventComponent.queryByText(event.created)).toBeInTheDocument();
   });
 
-  test('collapses event details when the event is clicked again', () => {
-    const { getByText, queryByText } = render(<Event event={event} />);
-    fireEvent.click(getByText(event.summary)); // Expand the event
-    fireEvent.click(getByText(event.summary)); // Collapse the event
-    expect(queryByText(event.description)).not.toBeInTheDocument();
-    expect(queryByText(event.location)).not.toBeInTheDocument();
-    event.attendees.forEach(attendee => {
-      expect(queryByText(attendee.email)).not.toBeInTheDocument();
-    });
+  test('has event location', () => {
+    expect(EventComponent.queryByText(event.location)).toBeInTheDocument();
   });
+
+  test('has button show details', () => {
+    expect(EventComponent.queryByText('Show Details')).toBeInTheDocument();
+  });
+
+  test('by default, events details section should be hidden', () => {
+    const details = EventComponent.container.querySelector('.details');
+    expect(details).not.toBeInTheDocument();
+  });
+
+  test('shows details section, when user clicks show details button', async() => {
+    const user = userEvent.setup();
+    const button = EventComponent.queryByText('Show Details');
+    await user.click(button);
+    const details = EventComponent.container.querySelector('.details');
+    expect(details).toBeInTheDocument();
+  });
+
+  test('hide details section, when user clicks hide details button', async() => {
+    const user = userEvent.setup();
+    const showButton = EventComponent.queryByText('Show Details');
+    const hideButton = EventComponent.queryByText('Hide Details');
+    user.click(hideButton);
+    expect(showButton).toBeInTheDocument();
+    expect(hideButton).not.toBeInTheDocument();
+
+  })
+
+  
 });

@@ -1,49 +1,26 @@
-// src/__tests__/NumberOfEvents.test.js
-
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { getEvents } from '../api';
 import NumberOfEvents from '../components/NumberOfEvents';
+import userEvent from '@testing-library/user-event';
 
 describe('<NumberOfEvents /> component', () => {
-  let handleNumberOfEventsChange;
-
-  beforeEach(() => {
-    handleNumberOfEventsChange = jest.fn();
+    let NumberOfEventsComponent;
+    beforeEach(() => {
+        NumberOfEventsComponent = render(<NumberOfEvents/>);
+    })
+  test('has an element with "textbox" role', () => {
+    expect(NumberOfEventsComponent.queryByRole("textbox")).toBeInTheDocument();
   });
 
-  test('renders default number of events as 32', () => {
-    render(<NumberOfEvents numberOfEvents={32} onNumberOfEventsChange={handleNumberOfEventsChange} />);
-
-    const button32 = screen.getByText('32 events');
-    expect(button32).toBeInTheDocument();
-    fireEvent.click(button32);
-    expect(handleNumberOfEventsChange).toHaveBeenCalledWith(32);
+  test('default value is 32', () => {
+    expect(NumberOfEventsComponent.queryByRole('textbox')).toHaveValue('32');
   });
 
-  test('renders and handles 5 events button', () => {
-    render(<NumberOfEvents numberOfEvents={32} onNumberOfEventsChange={handleNumberOfEventsChange} />);
+  test('update numberOfEvents when user types', async() => {
+    const numberOfEvents = NumberOfEventsComponent.queryByRole('textbox');
+    const user = userEvent.setup();
+    await user.type(numberOfEvents, '{backspace}{backspace}10');
+    expect(numberOfEvents).toHaveValue('10');
+  })
 
-    const button5 = screen.getByText('5 events');
-    expect(button5).toBeInTheDocument();
-    fireEvent.click(button5);
-    expect(handleNumberOfEventsChange).toHaveBeenCalledWith(5);
-  });
-
-  test('renders and handles 10 events button', () => {
-    render(<NumberOfEvents numberOfEvents={32} onNumberOfEventsChange={handleNumberOfEventsChange} />);
-
-    const button10 = screen.getByText('10 events');
-    expect(button10).toBeInTheDocument();
-    fireEvent.click(button10);
-    expect(handleNumberOfEventsChange).toHaveBeenCalledWith(10);
-  });
-
-  test('renders and handles 20 events button', () => {
-    render(<NumberOfEvents numberOfEvents={32} onNumberOfEventsChange={handleNumberOfEventsChange} />);
-
-    const button20 = screen.getByText('20 events');
-    expect(button20).toBeInTheDocument();
-    fireEvent.click(button20);
-    expect(handleNumberOfEventsChange).toHaveBeenCalledWith(20);
-  });
 });
