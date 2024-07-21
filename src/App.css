@@ -1,3 +1,4 @@
+/* Apply global styles */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #e6f0f8;
@@ -7,6 +8,7 @@ body {
   line-height: 1.6;
 }
 
+/* Container styling */
 .App {
   max-width: 800px;
   margin: 40px auto;
@@ -16,10 +18,36 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#city-search {
-  margin-bottom: 6px;
+/* General styling for elements inside the App */
+.App * {
+  box-sizing: border-box;
 }
 
+/* Styling for lists */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Paragraph styling */
+p {
+  margin: 5px 0;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="number"] {
+  width: 97%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/* Styling for city input */
 .city {
   width: 97%;
   padding: 12px;
@@ -28,140 +56,75 @@ body {
   border-radius: 6px;
 }
 
-.suggestion {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  border: 1px solid #ccd6dd;
-  border-radius: 6px;
-  overflow: hidden;
+/* City search container styling */
+#city-search {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
 }
 
-.suggestion li {
-  padding: 10px;
+/* Suggestions dropdown styling */
+.suggestions {
+  width: 97%;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: 2;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestions > li {
+  padding: 12px;
+  background-color: #ffffff;
   cursor: pointer;
   border-bottom: 1px solid #ccd6dd;
 }
 
-.suggestion li:last-child {
+.suggestions > li:last-child {
   border-bottom: none;
 }
 
-.suggestion li:hover {
+.suggestions > li:hover {
   background-color: #ecf5ff;
 }
 
-#numberOfEvents {
-  margin-bottom: 20px;
-}
-
-#numberOfEvents input {
-  width: 97%;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccd6dd;
-  border-radius: 6px;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-}
-
+/* Event styling */
 .event {
-  border: 1px solid #ccd6dd;
-  margin-bottom: 20px;
   padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  border: 1px solid #ccd6dd;
   border-radius: 8px;
   position: relative;
   background-color: #fdfdfd;
 }
 
-.showDetailsButton {
+/* Show details button styling */
+.details-btn {
   position: absolute;
-  top: 15px;
   right: 15px;
+  bottom: 15px;
   background-color: #3498db;
   color: #ffffff;
   padding: 8px 12px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.showDetailsButton:hover {
-  background-color: #2980b9;
-}
-
-.details {
-  margin-top: 10px;
-  padding: 15px;
-  border: 1px solid #ccd6dd;
-  border-radius: 8px;
-  background-color: #fafafa;
-  display: none; /* Hidden by default */
-}
-
-.details.active {
-  display: block; /* Show when active class is added */
-}
-
-.details.empty::before {
-  content: 'No information available.';
-  display: block;
-  color: #999;
-  text-align: center;
-  font-style: italic;
-  padding: 10px 0;
-}
-
-/* Popup Style */
-.popup {
+/* Alerts container styling */
+.alerts-container {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 600px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  top: 0px;
+  left: 20px;
+  width: 250px;
   z-index: 1000;
-}
-
-.popup .closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #e74c3c;
-  color: #ffffff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.popup .closeButton:hover {
-  background-color: #c0392b;
-}
-
-.popup .content {
-  margin-top: 20px;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
 }
