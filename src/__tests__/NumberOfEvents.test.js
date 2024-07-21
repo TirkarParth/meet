@@ -1,26 +1,28 @@
-import { render } from '@testing-library/react';
-import { getEvents } from '../api';
-import NumberOfEvents from '../components/NumberOfEvents';
 import userEvent from '@testing-library/user-event';
+import NumberOfEvents from '../components/NumberOfEvents';
+import { render } from '@testing-library/react';
 
-describe('<NumberOfEvents /> component', () => {
-    let NumberOfEventsComponent;
-    beforeEach(() => {
-        NumberOfEventsComponent = render(<NumberOfEvents/>);
-    })
-  test('has an element with "textbox" role', () => {
-    expect(NumberOfEventsComponent.queryByRole("textbox")).toBeInTheDocument();
+describe('<NumberOfEvents /> Component', () => {
+  let NumberOfEventsComponent;
+  beforeEach(() => {
+    NumberOfEventsComponent = render(
+      <NumberOfEvents setCurrentNOE={() => {}} />
+    );
   });
 
-  test('default value is 32', () => {
-    expect(NumberOfEventsComponent.queryByRole('textbox')).toHaveValue('32');
+  test('has the input textbox', () => {
+    const input = NumberOfEventsComponent.queryByRole('textbox');
+    expect(input).toBeInTheDocument();
   });
 
-  test('update numberOfEvents when user types', async() => {
-    const numberOfEvents = NumberOfEventsComponent.queryByRole('textbox');
-    const user = userEvent.setup();
-    await user.type(numberOfEvents, '{backspace}{backspace}10');
-    expect(numberOfEvents).toHaveValue('10');
-  })
+  test('default number of events is 32', () => {
+    const input = NumberOfEventsComponent.queryByRole('textbox');
+    expect(input).toHaveValue('32');
+  });
 
+  test('updates number of events when user types', async () => {
+    const input = NumberOfEventsComponent.queryByRole('textbox');
+    await userEvent.type(input, '{backspace}{backspace}10');
+    expect(input).toHaveValue('10');
+  });
 });
