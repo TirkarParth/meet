@@ -1,7 +1,17 @@
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const handleInputChanged = (event) => {
     const value = event.target.value;
-    setCurrentNOE(value);
+
+    if (isNaN(value)) {
+      setErrorAlert('Please enter a positive number.');
+    } else if (value > 50) {
+      setErrorAlert('Value cannot exceed 50.');
+    } else if (value <= 0) {
+      setErrorAlert('Value must be at least 1.');
+    } else {
+      setErrorAlert('');
+      setCurrentNOE(value);
+    }
   };
 
   return (
