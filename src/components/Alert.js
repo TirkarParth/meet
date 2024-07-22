@@ -1,5 +1,6 @@
 import { Component } from 'react';
 
+// Base Alert Component
 class Alert extends Component {
   constructor(props) {
     super(props);
@@ -13,14 +14,14 @@ class Alert extends Component {
       backgroundColor: this.bgColor,
       borderWidth: '2px',
       borderStyle: 'solid',
-      fontWeight: 'bolder',
-      borderRadius: '12px',
+      borderRadius: '8px',
       borderColor: this.color,
       textAlign: 'center',
       fontSize: '14px',
       margin: '15px 0',
       padding: '12px',
-      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+      fontFamily: 'Roboto, sans-serif',
     };
   };
 
@@ -33,20 +34,31 @@ class Alert extends Component {
   }
 }
 
+// Info Alert Component
 class InfoAlert extends Alert {
   constructor(props) {
     super(props);
-    this.color = '#3498db'; // blue
-    this.bgColor = '#ecf5ff'; // light blue
+    this.color = '#3498db'; // Blue
+    this.bgColor = '#ecf5ff'; // Light blue
   }
 }
 
+// Error Alert Component
 class ErrorAlert extends Alert {
   constructor(props) {
     super(props);
-    this.color = '#e74c3c'; // red
-    this.bgColor = '#fdecea'; // light red
+    this.color = '#e74c3c'; // Red
+    this.bgColor = '#fdecea'; // Light red
   }
 }
 
-export { InfoAlert, ErrorAlert };
+// Warning Alert Component
+class WarningAlert extends Alert {
+  constructor(props) {
+    super(props);
+    this.color = '#e67e22'; // Orange
+    this.bgColor = '#fef3e2'; // Light orange
+  }
+}
+
+export { InfoAlert, ErrorAlert, WarningAlert };

@@ -4,7 +4,7 @@ import NumberOfEvents from './components/NumberOfEvents';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { extractLocations, getEvents } from './api';
-import { ErrorAlert, InfoAlert } from './components/Alert';
+import { ErrorAlert, InfoAlert, WarningAlert } from './components/Alert';
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -13,27 +13,24 @@ const App = () => {
   const [currentCity, setCurrentCity] = useState('See all cities');
   const [infoAlert, setInfoAlert] = useState('');
   const [errorAlert, setErrorAlert] = useState('');
+  const [warningAlert, setWarningAlert] = useState('');
 
   const fetchData = async () => {
-    try {
-      const allEvents = await getEvents();
-      if (Array.isArray(allEvents)) {
-        const filteredEvents =
-          currentCity === 'See all cities'
-            ? allEvents
-            : allEvents.filter((event) => event.location === currentCity);
-        setEvents(filteredEvents.slice(0, currentNOE));
-        setAllLocations(extractLocations(allEvents));
-      } else {
-        throw new Error('Failed to fetch events');
-      }
-    } catch (error) {
-      setErrorAlert('Failed to fetch events');
-      console.error(error);
-    }
+    const allEvents = await getEvents();
+    const filteredEvents =
+      currentCity === 'See all cities'
+        ? allEvents
+        : allEvents.filter((event) => event.location === currentCity);
+    setEvents(filteredEvents.slice(0, currentNOE));
+    setAllLocations(extractLocations(allEvents));
   };
 
   useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert('');
+    } else {
+      setWarningAlert('You seem to be offline!');
+    }
     fetchData();
   }, [currentCity, currentNOE]);
 
@@ -42,6 +39,7 @@ const App = () => {
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+        {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
       <NumberOfEvents
         setCurrentNOE={setCurrentNOE}
