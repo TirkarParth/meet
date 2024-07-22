@@ -2,7 +2,7 @@ import EventList from './components/EventList';
 import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { extractLocations, getEvents } from './api';
 import { ErrorAlert, InfoAlert, WarningAlert } from './components/Alert';
 
@@ -15,7 +15,7 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState('');
   const [warningAlert, setWarningAlert] = useState('');
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const allEvents = await getEvents();
     const filteredEvents =
       currentCity === 'See all cities'
@@ -23,7 +23,7 @@ const App = () => {
         : allEvents.filter((event) => event.location === currentCity);
     setEvents(filteredEvents.slice(0, currentNOE));
     setAllLocations(extractLocations(allEvents));
-  };
+  }, [currentCity, currentNOE]);
 
   useEffect(() => {
     if (navigator.onLine) {
@@ -32,7 +32,7 @@ const App = () => {
       setWarningAlert('You seem to be offline!');
     }
     fetchData();
-  }, [currentCity, currentNOE]);
+  }, [fetchData]);
 
   return (
     <div className="App">
