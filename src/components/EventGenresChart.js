@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { Pie, PieChart, ResponsiveContainer } from 'recharts';
+import { Pie, PieChart, ResponsiveContainer, Cell } from 'recharts';
 
 const EventGenresChart = ({ events }) => {
   const [data, setData] = useState([]);
 
   const genres = useMemo(() => ['React', 'JavaScript', 'Node', 'jQuery', 'Angular'], []);
+  const colors = useMemo(() => ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF6347'], []);
 
   const renderCustomizedLabel = ({
     cx,
@@ -16,8 +17,8 @@ const EventGenresChart = ({ events }) => {
   }) => {
     const RADIAN = Math.PI / 180;
     const radius = outerRadius;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
-    const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN) * 0.6;
+    const y = cy + radius * Math.sin(-midAngle * RADIAN) * 0.6;
     return percent ? (
       <text
         x={x}
@@ -55,11 +56,14 @@ const EventGenresChart = ({ events }) => {
         <Pie
           data={data}
           dataKey="value"
-          fill="#8884d8"
           labelLine={false}
           label={renderCustomizedLabel}
           outerRadius={150}
-        />
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+          ))}
+        </Pie>
       </PieChart>
     </ResponsiveContainer>
   );

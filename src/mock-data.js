@@ -11,7 +11,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'Germany',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -48,9 +48,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=NXNoeXAzN2xqajdvb3diYzAzdGdvaGZnZmlfMjAyMzA3MTVUMTMwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-07-15T14:00:00.000Z",
     "updated": "2023-07-15T14:00:00.000Z",
-    "summary": "AI and Machine Learning Workshop",
-    "description": "Dive into the world of AI and machine learning with this interactive workshop. Discover how algorithms work and their applications in various industries.",
-    "location": "San Francisco, CA",
+    "summary": "Angular",
+    "description": "Delve into the Angular framework with this comprehensive workshop. Learn the fundamentals of Angular and how to build dynamic, responsive web applications.",
+    "location": "USA",
     "creator": {
       "email": "techguru@techacademy.com",
       "self": true
@@ -87,9 +87,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=NmpjbnY3dDlwY3l6enJvNDR0Nm1idjc1c19tMjAyMzA3MjJUMTYwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-07-22T17:00:00.000Z",
     "updated": "2023-07-22T17:00:00.000Z",
-    "summary": "Digital Marketing Strategies",
-    "description": "Learn the latest trends and strategies in digital marketing. This session covers SEO, content marketing, and social media strategies.",
-    "location": "New York, NY",
+    "summary": "jQuery",
+    "description": "Master the essentials of jQuery in this session. Understand how to simplify HTML document traversing, event handling, and animation with jQuery.",
+    "location": "USA",
     "creator": {
       "email": "marketingpro@digitalhub.com",
       "self": true
@@ -126,9 +126,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=N25kcHc4c2ZqcmtnbGp6YTQ1dmhsa3A4b19tMjAyMzA3MzBUMTgwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-07-30T19:00:00.000Z",
     "updated": "2023-07-30T19:00:00.000Z",
-    "summary": "Art and Creativity Symposium",
-    "description": "Join us for an inspiring symposium on art and creativity. Engage with artists, attend workshops, and explore various forms of creative expression.",
-    "location": "Paris, France",
+    "summary": "Angular",
+    "description": "Delve into the Angular framework with this comprehensive workshop. Learn the fundamentals of Angular and how to build dynamic, responsive web applications.",
+    "location": "France",
     "creator": {
       "email": "artlover@creativeworld.com",
       "self": true
@@ -165,9 +165,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=OHEybHA5cjZjazRvdzZ0N2Z2cS1fc2VhYXJ5YXJfMjAyMzA4MTBUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-08-10T15:00:00.000Z",
     "updated": "2023-08-10T15:00:00.000Z",
-    "summary": "Cooking with Fresh Ingredients",
-    "description": "Explore the art of cooking with fresh, locally sourced ingredients. Participate in hands-on cooking sessions and learn new recipes.",
-    "location": "Rome, Italy",
+    "summary": "Node",
+    "description": "Explore Node.js and its ecosystem. Learn how to build efficient server-side applications using JavaScript, and discover key Node.js modules and frameworks.",
+    "location": "France",
     "creator": {
       "email": "chef@italianfood.com",
       "self": true
@@ -178,16 +178,16 @@ const mockData = [
     },
     "start": {
       "dateTime": "2023-08-10T10:00:00+02:00",
-      "timeZone": "Europe/Rome"
+      "timeZone": "Europe/Paris"
     },
     "end": {
       "dateTime": "2023-08-10T13:00:00+02:00",
-      "timeZone": "Europe/Rome"
+      "timeZone": "Europe/Paris"
     },
     "recurringEventId": "8qrlp9r6cjnvqez76t7fvlq20",
     "originalStartTime": {
       "dateTime": "2023-08-10T10:00:00+02:00",
-      "timeZone": "Europe/Rome"
+      "timeZone": "Europe/Paris"
     },
     "iCalUID": "8qrlp9r6cjnvqez76t7fvlq20@google.com",
     "sequence": 0,
@@ -204,9 +204,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=OXJtdHgzbGNxcnZubnVrNzRpNXdqc2I0ZV9tMjAyMzA4MjVUMTEwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-08-25T12:00:00.000Z",
     "updated": "2023-08-25T12:00:00.000Z",
-    "summary": "History of Architecture Lecture",
-    "description": "Join us for an enlightening lecture on the history of architecture, covering major architectural styles and their impact on modern design.",
-    "location": "Berlin, Germany",
+    "summary": "jQuery",
+    "description": "Master the essentials of jQuery in this session. Understand how to simplify HTML document traversing, event handling, and animation with jQuery.",
+    "location": "Germany",
     "creator": {
       "email": "archhist@designschool.com",
       "self": true
@@ -243,9 +243,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=YXI1azdxdG1yZHhvYzdsbG03cGJ6bThfMjAyMzA5MDVUMTUwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-09-05T16:00:00.000Z",
     "updated": "2023-09-05T16:00:00.000Z",
-    "summary": "Modern Art Exhibition",
-    "description": "Experience the latest trends in modern art at this exclusive exhibition. Meet artists and view a diverse collection of artworks.",
-    "location": "Tokyo, Japan",
+    "summary": "Angular",
+    "description": "Delve into the Angular framework with this comprehensive workshop. Learn the fundamentals of Angular and how to build dynamic, responsive web applications.",
+    "location": "Japan",
     "creator": {
       "email": "artcurator@artworld.com",
       "self": true
@@ -282,9 +282,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=YnE2cDledHZ1ZGZxZW45enNseWJoaDZlXzIwMjMwOTE4VDEyMDAwMFoiBmd1bGxzdGFja3dlYgpkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-09-18T13:00:00.000Z",
     "updated": "2023-09-18T13:00:00.000Z",
-    "summary": "Sustainable Energy Seminar",
-    "description": "Learn about the latest innovations in sustainable energy and how they are shaping the future of our planet.",
-    "location": "Sydney, Australia",
+    "summary": "Node",
+    "description": "Explore Node.js and its ecosystem. Learn how to build efficient server-side applications using JavaScript, and discover key Node.js modules and frameworks.",
+    "location": "Australia",
     "creator": {
       "email": "energyexpert@greentech.com",
       "self": true
@@ -321,9 +321,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=Y3I3eDhtdjBocHp5eXIycDRkdjMwbzVfMjAyMzA5MjVUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-09-25T13:00:00.000Z",
     "updated": "2023-09-25T13:00:00.000Z",
-    "summary": "Blockchain Technology Overview",
-    "description": "Understand the fundamentals of blockchain technology, its applications, and its potential impact on various industries.",
-    "location": "Toronto, Canada",
+    "summary": "jQuery",
+    "description": "Master the essentials of jQuery in this session. Understand how to simplify HTML document traversing, event handling, and animation with jQuery.",
+    "location": "Canada",
     "creator": {
       "email": "blockchain@techinsights.com",
       "self": true
@@ -360,9 +360,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=ZHNrOHhscnRrNm5jb2h2N3p0aDhrMDBfMjAyMzEwMDFUMDkwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-10-01T10:00:00.000Z",
     "updated": "2023-10-01T10:00:00.000Z",
-    "summary": "Startup Funding Strategies",
-    "description": "Gain insights into successful startup funding strategies from industry experts. Learn about venture capital, crowdfunding, and more.",
-    "location": "Vancouver, Canada",
+    "summary": "Angular",
+    "description": "Delve into the Angular framework with this comprehensive workshop. Learn the fundamentals of Angular and how to build dynamic, responsive web applications.",
+    "location": "Canada",
     "creator": {
       "email": "startupguru@bizventures.com",
       "self": true
@@ -399,9 +399,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=ZXQ1ajlyd3NscGt3NWhrbTZqN3QyeWFvMF9tMjAyMzEwMTBUMTUwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-10-10T16:00:00.000Z",
     "updated": "2023-10-10T16:00:00.000Z",
-    "summary": "Health and Wellness Fair",
-    "description": "Explore the latest in health and wellness with various exhibitors and speakers. Topics include nutrition, fitness, and mental health.",
-    "location": "Dubai, UAE",
+    "summary": "jQuery",
+    "description": "Master the essentials of jQuery in this session. Understand how to simplify HTML document traversing, event handling, and animation with jQuery.",
+    "location": "UAE",
     "creator": {
       "email": "wellness@healthtoday.com",
       "self": true
@@ -438,9 +438,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=Zm50NGs3bTdwOGMzem5odDZXb3Y4bF9tMjAyMzEwMTVUMTcwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-10-15T18:00:00.000Z",
     "updated": "2023-10-15T18:00:00.000Z",
-    "summary": "Tech Innovations Conference",
-    "description": "Discover the latest technological innovations and trends at this conference. Network with tech leaders and innovators.",
-    "location": "Los Angeles, CA",
+    "summary": "jQuery",
+    "description": "Master the essentials of jQuery in this session. Understand how to simplify HTML document traversing, event handling, and animation with jQuery.",
+    "location": "USA",
     "creator": {
       "email": "techinnovator@techworld.com",
       "self": true
@@ -477,9 +477,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=Z3E5dzhobWMzcmpzNnZkYjlzNWh4dHA4bl9tMjAyMzEwMjBUMjMwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-10-20T14:00:00.000Z",
     "updated": "2023-10-20T14:00:00.000Z",
-    "summary": "Urban Gardening Tips",
-    "description": "Learn how to create and maintain a garden in an urban environment. Get practical advice on plants, soil, and urban garden design.",
-    "location": "Hong Kong, China",
+    "summary": "jQuery",
+    "description": "Master the essentials of jQuery in this session. Understand how to simplify HTML document traversing, event handling, and animation with jQuery.",
+    "location": "China",
     "creator": {
       "email": "gardening@urbanlife.com",
       "self": true
@@ -516,9 +516,9 @@ const mockData = [
     "htmlLink": "https://www.google.com/calendar/event?eid=aHE4cjdrczNwNmxjb3d6bHY1djVfbGFzdF9tMjAyMzEwMjhUMTEwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
     "created": "2023-10-28T12:00:00.000Z",
     "updated": "2023-10-28T12:00:00.000Z",
-    "summary": "AI and Machine Learning Symposium",
-    "description": "Join experts in AI and machine learning for a symposium on the latest advancements and future directions in these fields.",
-    "location": "San Francisco, CA",
+    "summary": "Node",
+    "description": "Explore Node.js and its ecosystem. Learn how to build efficient server-side applications using JavaScript, and discover key Node.js modules and frameworks.",
+    "location": "USA",
     "creator": {
       "email": "ai@techforum.com",
       "self": true
@@ -556,10 +556,10 @@ const mockData = [
       'https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA1MjBUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20',
     created: '2020-05-19T19:14:30.000Z',
     updated: '2020-05-27T11:45:37.792Z',
-    summary: 'React is Fun',
+    summary: 'React',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Japan',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -597,10 +597,10 @@ const mockData = [
       'https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA1MjFUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20',
     created: '2020-05-19T19:17:46.000Z',
     updated: '2020-05-27T12:01:32.356Z',
-    summary: 'Learn JavaScript',
+    summary: 'JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'UK',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -641,7 +641,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Germany',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -723,7 +723,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Germany',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -764,7 +764,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'Canada',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -805,7 +805,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'India',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -846,7 +846,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'UK',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -887,7 +887,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Germany',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -928,7 +928,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'India',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -969,7 +969,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'UAE',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1051,7 +1051,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'India',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1092,7 +1092,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'France',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1133,7 +1133,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'UAE',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1174,7 +1174,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'Canada',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1215,7 +1215,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Canada',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1256,7 +1256,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'UAE',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1297,7 +1297,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'China',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1338,7 +1338,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'China',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1379,7 +1379,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Germany',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1420,7 +1420,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'UK',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1461,7 +1461,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'India',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1502,7 +1502,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'India',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1543,7 +1543,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Australia',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1584,7 +1584,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'Africa',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1625,7 +1625,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Germany',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1666,7 +1666,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'India',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1707,7 +1707,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'USA',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1748,7 +1748,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'UK',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1789,7 +1789,7 @@ const mockData = [
     summary: 'React is Fun',
     description:
       'Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ',
-    location: 'Berlin, Germany',
+    location: 'Australia',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
@@ -1830,7 +1830,7 @@ const mockData = [
     summary: 'Learn JavaScript',
     description:
       'Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.',
-    location: 'London, UK',
+    location: 'Belgium',
     creator: {
       email: 'fullstackwebdev@careerfoundry.com',
       self: true,
